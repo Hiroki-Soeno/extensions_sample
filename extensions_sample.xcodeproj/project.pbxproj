@@ -12,6 +12,7 @@
 		CACEFCA22174C9510057FFC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACEFCA02174C9510057FFC9 /* Main.storyboard */; };
 		CACEFCA42174C9550057FFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CACEFCA32174C9550057FFC9 /* Assets.xcassets */; };
 		CACEFCA72174C9550057FFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CACEFCA52174C9550057FFC9 /* LaunchScreen.storyboard */; };
+		CACEFCB12174CF4F0057FFC9 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEFCB02174CF4F0057FFC9 /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CACEFCA32174C9550057FFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CACEFCA62174C9550057FFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CACEFCA82174C9550057FFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CACEFCB02174CF4F0057FFC9 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		CACEFC9B2174C9510057FFC9 /* extensions_sample */ = {
 			isa = PBXGroup;
 			children = (
+				CACEFCAE2174CDF50057FFC9 /* Extension */,
 				CACEFC9C2174C9510057FFC9 /* AppDelegate.swift */,
 				CACEFC9E2174C9510057FFC9 /* ViewController.swift */,
 				CACEFCA02174C9510057FFC9 /* Main.storyboard */,
@@ -62,6 +65,22 @@
 				CACEFCA82174C9550057FFC9 /* Info.plist */,
 			);
 			path = extensions_sample;
+			sourceTree = "<group>";
+		};
+		CACEFCAE2174CDF50057FFC9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CACEFCAF2174CE1A0057FFC9 /* Int */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CACEFCAF2174CE1A0057FFC9 /* Int */ = {
+			isa = PBXGroup;
+			children = (
+				CACEFCB02174CF4F0057FFC9 /* Formatter.swift */,
+			);
+			path = Int;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACEFC9F2174C9510057FFC9 /* ViewController.swift in Sources */,
+				CACEFCB12174CF4F0057FFC9 /* Formatter.swift in Sources */,
 				CACEFC9D2174C9510057FFC9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
