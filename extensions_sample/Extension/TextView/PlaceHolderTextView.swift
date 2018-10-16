@@ -92,7 +92,6 @@ import UIKit
     @IBInspectable var placeHolder: String = "" {
         didSet {
             self.placeHolderLabel.text = self.placeHolder
-            //self.placeHolderLabel.sizeToFit()
         }
     }
 }
