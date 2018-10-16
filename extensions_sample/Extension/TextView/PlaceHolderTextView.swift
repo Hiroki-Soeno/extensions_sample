@@ -28,7 +28,7 @@ import UIKit
                                                   blue: 0.0980392,
                                                   alpha: 0.22)
         self.placeHolderLabel.backgroundColor = .clear
-        self.addSubview(placeHolderLabel)
+        self.addSubview(self.placeHolderLabel)
     }
 
     func configureBorder() {
@@ -51,13 +51,13 @@ import UIKit
         self.changeVisiblePlaceHolder()
         self.configureBorder()
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(textChanged),
+                                               selector: #selector(self.textChanged),
                                                name: UITextView.textDidChangeNotification,
                                                object: nil)
     }
 
     @objc private func textChanged(notification: NSNotification?) {
-        changeVisiblePlaceHolder()
+        self.changeVisiblePlaceHolder()
     }
 
     deinit {
