@@ -15,10 +15,7 @@ import UIKit
  * textView.placeHolderLabel.text = "hogehoge"
  */
 @IBDesignable class PlaceHolderTextView: UITextView {
-    private lazy var placeHolderLabel: UILabel = UILabel(frame: CGRect(x: 6.0,
-                                                                       y: 6.0,
-                                                                       width: 200.0,
-                                                                       height: 30.0))
+    private lazy var placeHolderLabel: UILabel = UILabel()
 
     private func configurePlaceHolder() {
         self.placeHolderLabel.lineBreakMode = .byWordWrapping
@@ -28,7 +25,35 @@ import UIKit
                                                   blue: 0.0980392,
                                                   alpha: 0.22)
         self.placeHolderLabel.backgroundColor = .clear
-        self.addSubview(placeHolderLabel)
+        self.placeHolderLabel.numberOfLines = 0
+        self.placeHolderLabel.adjustsFontSizeToFitWidth = true
+
+        self.addSubview(self.placeHolderLabel)
+
+        self.setPlaceHolderConstraints()
+    }
+
+    private func setPlaceHolderConstraints() {
+        let constantMargin: CGFloat = 8.0
+
+        var topTargetAnchor: NSLayoutAnchor<NSLayoutYAxisAnchor>
+        var leftTargetAnchor: NSLayoutAnchor<NSLayoutXAxisAnchor>
+        var rightTargetAnchor: NSLayoutAnchor<NSLayoutXAxisAnchor>
+
+        if #available(iOS 11.0, *) {
+            topTargetAnchor = self.safeAreaLayoutGuide.topAnchor
+            leftTargetAnchor = self.safeAreaLayoutGuide.leftAnchor
+            rightTargetAnchor = self.safeAreaLayoutGuide.rightAnchor
+        } else {
+            topTargetAnchor = self.topAnchor
+            leftTargetAnchor = self.leftAnchor
+            rightTargetAnchor = self.rightAnchor
+        }
+
+        self.placeHolderLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.placeHolderLabel.topAnchor.constraint(equalTo: topTargetAnchor, constant: constantMargin).isActive = true
+        self.placeHolderLabel.leftAnchor.constraint(equalTo: leftTargetAnchor, constant: constantMargin).isActive = true
+        self.placeHolderLabel.rightAnchor.constraint(equalTo: rightTargetAnchor, constant: -constantMargin).isActive = true
     }
 
     func configureBorder() {
@@ -51,13 +76,13 @@ import UIKit
         self.changeVisiblePlaceHolder()
         self.configureBorder()
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(textChanged),
+                                               selector: #selector(self.textChanged),
                                                name: UITextView.textDidChangeNotification,
                                                object: nil)
     }
 
     @objc private func textChanged(notification: NSNotification?) {
-        changeVisiblePlaceHolder()
+        self.changeVisiblePlaceHolder()
     }
 
     deinit {
