@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA65308D21775BF40080C898 /* Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65308C21775BF40080C898 /* Hexadecimal.swift */; };
 		CA9E5AD7217612D800294C31 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E5AD6217612D800294C31 /* PlaceHolderTextView.swift */; };
 		CACEFC9D2174C9510057FFC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEFC9C2174C9510057FFC9 /* AppDelegate.swift */; };
 		CACEFC9F2174C9510057FFC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEFC9E2174C9510057FFC9 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA65308C21775BF40080C898 /* Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexadecimal.swift; sourceTree = "<group>"; };
 		CA9E5AD6217612D800294C31 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		CACEFC992174C9510057FFC9 /* extensions_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = extensions_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACEFC9C2174C9510057FFC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA65308B21775BB10080C898 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				CA65308C21775BF40080C898 /* Hexadecimal.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		CA9E5AD5217612BE00294C31 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		CACEFCAE2174CDF50057FFC9 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CA65308B21775BB10080C898 /* UIColor */,
 				CA9E5AD5217612BE00294C31 /* TextView */,
 				CACEFCAF2174CE1A0057FFC9 /* Int */,
 			);
@@ -168,6 +179,7 @@
 				CACEFC9F2174C9510057FFC9 /* ViewController.swift in Sources */,
 				CACEFCB12174CF4F0057FFC9 /* Formatter.swift in Sources */,
 				CACEFC9D2174C9510057FFC9 /* AppDelegate.swift in Sources */,
+				CA65308D21775BF40080C898 /* Hexadecimal.swift in Sources */,
 				CA9E5AD7217612D800294C31 /* PlaceHolderTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
