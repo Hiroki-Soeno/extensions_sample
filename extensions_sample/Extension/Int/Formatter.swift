@@ -13,25 +13,13 @@ extension Int {
      * number.shortValue
     */
     var shortValue: String {
-        let k: Double = 1000
-        let m: Double = 1000000
-        let value = Double(self)
+        let kilo: Int = 1_000
+        let mega: Int = 1_000_000
 
-        if value >= k && value < m {
-            let double = (value/k).rounded(toPlaces: 1)
-            return  String(format:"%g", double) + "k"
-        } else if value >= m {
-            let double = (value/m).rounded(toPlaces: 1)
-            return String(format:"%g", double) + "m"
+        switch self {
+        case (0..<kilo):    return String(format: "%d", self)
+        case (kilo..<mega): return String(format: "%.1fk", Double(self) / Double(kilo))
+        default:            return String(format: "%.1fm", Double(self) / Double(mega))
         }
-        return "\(self)"
-    }
-}
-
-extension Double {
-    /// Rounds the double to decimal places value
-    func rounded(toPlaces places:Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return (self * divisor).rounded() / divisor
     }
 }
