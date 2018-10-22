@@ -20,4 +20,20 @@ extension UIImageView {
             self.clipsToBounds = true
         }
     }
+  
+    // 自分の環境だとメインスレッドでcornerRadiusを当てようとすると、過去に、一瞬表示がガチャつくことがありました。
+    // もしそういった事象が発生する場合はimageView自体のサイズの確定を待たずに丸くしたimageを作成し
+    // それを当てる以下のコードがお役にたつかもしれません。
+    func applyRoundImage() {
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFill
+        if imageView.frame.size.height > imageView.frame.size.width {
+            imageView.frame.size.height = imageView.frame.size.width
+        } else {
+            imageView.frame.size.width = imageView.frame.size.height
+        }
+        imageView.layer.cornerRadius = imageView.frame.size.height / 2
+        imageView.clipsToBounds = true
+        image = UIImage.screenshot(of: imageView)
+    }
 }
