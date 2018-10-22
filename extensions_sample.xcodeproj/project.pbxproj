@@ -10,6 +10,7 @@
 		CA5CC337217A28C300770C3E /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5CC336217A28C300770C3E /* TableView.swift */; };
 		CA65308D21775BF40080C898 /* Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA65308C21775BF40080C898 /* Hexadecimal.swift */; };
 		CA6530932178C72E0080C898 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6530922178C72E0080C898 /* ParentViewController.swift */; };
+		CA89F086217DCC4300367910 /* ImageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89F085217DCC4300367910 /* ImageCircle.swift */; };
 		CA9E5AD7217612D800294C31 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E5AD6217612D800294C31 /* PlaceHolderTextView.swift */; };
 		CACEFC9D2174C9510057FFC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEFC9C2174C9510057FFC9 /* AppDelegate.swift */; };
 		CACEFC9F2174C9510057FFC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACEFC9E2174C9510057FFC9 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		CA5CC336217A28C300770C3E /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		CA65308C21775BF40080C898 /* Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexadecimal.swift; sourceTree = "<group>"; };
 		CA6530922178C72E0080C898 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		CA89F085217DCC4300367910 /* ImageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCircle.swift; sourceTree = "<group>"; };
 		CA9E5AD6217612D800294C31 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		CACEFC992174C9510057FFC9 /* extensions_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = extensions_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACEFC9C2174C9510057FFC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		CA89F084217DCC2800367910 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				CA89F085217DCC4300367910 /* ImageCircle.swift */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
 		CA9E5AD5217612BE00294C31 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		CACEFCAE2174CDF50057FFC9 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CA89F084217DCC2800367910 /* UIImageView */,
 				CA5CC335217A28AC00770C3E /* UITableVIew */,
 				CA6530912178C70B0080C898 /* UIView */,
 				CA65308B21775BB10080C898 /* UIColor */,
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CACEFC9F2174C9510057FFC9 /* ViewController.swift in Sources */,
+				CA89F086217DCC4300367910 /* ImageCircle.swift in Sources */,
 				CACEFCB12174CF4F0057FFC9 /* Formatter.swift in Sources */,
 				CA6530932178C72E0080C898 /* ParentViewController.swift in Sources */,
 				CACEFC9D2174C9510057FFC9 /* AppDelegate.swift in Sources */,
